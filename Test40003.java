@@ -1,0 +1,31 @@
+//程序填空，不要改变与输入输出有关的语句。
+//输入一个正整数repeat (0<repeat<10)，做repeat次下列运算：
+//读入1 个正实数x和1个正整数 n(n<=50)，计算并输出x的n次幂。
+//例：括号内是说明
+//输入
+//2   (repeat=2)
+//1.5 2
+//2.0 10
+//输出
+//2.25
+//1024.0
+
+import java.util.Scanner;
+public class Test40003 {
+	public static void main(String[] args) {
+	   int ri, repeat;
+	   int i, n;
+	   double x, mypow;
+	   Scanner in=new Scanner(System.in);
+	   repeat=in.nextInt();
+	   for(ri=1; ri<=repeat; ri++){
+		   x=in.nextDouble();
+		   n=in.nextInt();
+		   mypow=1;
+		   for (i=1; i<=n; i++) {
+			   mypow*=x;
+		   }
+		   System.out.println(mypow);
+	   }
+	}
+}
